@@ -1,0 +1,87 @@
+{
+  "name": "feathers-rabbit-queue",
+  "version": "1.0.0",
+  "description": "A Feathers service addapter for RabbitMQ based on rabbit-queue",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/touch4it/feathers-rabbit-queue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/touch4it/feathers-rabbit-queue/issues"
+  },
+  "homepage": "https://github.com/touch4it/feathers-rabbit-queue",
+  "author": "Touch4IT, s.r.o. <hi@touch4it.com> (https://touch4it.com/)",
+  "main": "lib/",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "xo lib/",
+    "test": "npm run lint"
+  },
+  "contributors": [
+    "Dušan Matejka <dusan.matejka@touch4it.com>"
+  ],
+  "keywords": [
+    "feathers",
+    "feathers-plugin",
+    "RabbitMQ",
+    "service",
+    "rabbit-queue"
+  ],
+  "xo": {
+    "envs": [
+      "node",
+      "mocha"
+    ],
+    "esnext": true,
+    "globals": [
+      "sails",
+      "async",
+      "_"
+    ],
+    "rules": {
+      "camelcase": "off",
+      "no-multi-spaces": [
+        "error",
+        {
+          "ignoreEOLComments": true
+        }
+      ],
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "block": {
+            "exceptions": [
+              "*"
+            ],
+            "markers": [
+              "!"
+            ]
+          }
+        }
+      ],
+      "unicorn/explicit-length-check": "off",
+      "unicorn/filename-case": "off"
+    },
+    "space": true
+  },
+  "dependencies": {
+    "@feathersjs/transport-commons": "^4.1.4",
+    "log4js": "^3.0.5",
+    "rabbit-queue": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "xo": "^0.23.0"
+  }
+}
