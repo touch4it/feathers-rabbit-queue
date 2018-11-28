@@ -1,6 +1,6 @@
 {
   "name": "feathers-rabbit-queue",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Feathers service addapter for RabbitMQ based on rabbit-queue",
   "license": "MIT",
   "engines": {
@@ -72,15 +72,15 @@
     "space": true
   },
   "dependencies": {
-    "@feathersjs/transport-commons": "^4.1.4",
-    "log4js": "^3.0.5",
-    "rabbit-queue": "^3.0.1"
+    "@feathersjs/transport-commons": "^4.1.6",
+    "log4js": "^3.0.6",
+    "rabbit-queue": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "^5.6.0",
+    "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "xo": "^0.23.0"
   }

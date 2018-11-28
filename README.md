@@ -50,11 +50,6 @@ app.use(express.urlencoded({extended: true}));
 
 // Set up Plugins and providers
 app.configure(express.rest());
-
-// Configure a middleware for 404s and the error handler
-app.use(express.notFound());
-app.use(express.errorHandler({logger}));
-
 app.configure(
   rabbitConfigure({
     uri: 'amqp://user:pass@host:5672',
@@ -62,6 +57,10 @@ app.configure(
     logger: console
   })
 );
+
+// Configure a middleware for 404s and the error handler
+app.use(express.notFound());
+app.use(express.errorHandler({logger}));
 ```
 
 Send custom message through RabbitMQ.
