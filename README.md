@@ -65,11 +65,30 @@ app.use(express.errorHandler({logger}));
 
 Send custom message through RabbitMQ.
 
-
+Create
 ```js
 async function customFunctionWithAppReference(app) {
   try {
     const result = await app.rabbit.createMessage({path: 'path/to/somewhere', method: 'create', body: {}});
+    console.log('Got result:', result);
+  } catch (error) {
+    console.log('Got error:', error);
+  }
+}
+```
+
+Remove
+```js
+async function customFunctionWithAppReference(app) {
+  try {
+    const result = await app.rabbit.createMessage({
+      path: 'path/to/somewhere',
+      method: 'create',
+      body: 'id-to-remove',
+      query: {
+        attribute: 'value'
+      }
+    });
     console.log('Got result:', result);
   } catch (error) {
     console.log('Got error:', error);
