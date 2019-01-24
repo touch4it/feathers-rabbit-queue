@@ -77,13 +77,32 @@ async function customFunctionWithAppReference(app) {
 }
 ```
 
+Patch
+```js
+async function customFunctionWithAppReference(app) {
+  try {
+    const result = await app.rabbit.createMessage({
+      path: 'path/to/somewhere/id-to-patch',
+      method: 'patch',
+      body: 'id-to-patch',
+      data: {
+        attribute: 'value'
+      }
+    });
+    console.log('Got result:', result);
+  } catch (error) {
+    console.log('Got error:', error);
+  }
+}
+```
+
 Remove
 ```js
 async function customFunctionWithAppReference(app) {
   try {
     const result = await app.rabbit.createMessage({
-      path: 'path/to/somewhere',
-      method: 'create',
+      path: 'path/to/somewhere/id-to-remove',
+      method: 'remove',
       body: 'id-to-remove',
       query: {
         attribute: 'value'

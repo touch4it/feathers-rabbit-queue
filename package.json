@@ -1,6 +1,6 @@
 {
   "name": "feathers-rabbit-queue",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A Feathers service addapter for RabbitMQ based on rabbit-queue",
   "license": "MIT",
   "engines": {
